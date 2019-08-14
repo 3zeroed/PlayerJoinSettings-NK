@@ -131,6 +131,7 @@ public class PlayerJoinSettings extends PluginBase implements Listener {
         if (getConfig().getBoolean("UI总开关")) new ModalForm(DATE, getConfig().getString("标题内容"), getConfig().getString("公告内容"), getConfig().getString("按钮1显示"), getConfig().getString("按钮2显示")).sendPlayer(player);
     }
 
+    @EventHandler
     public void onPlayerFormResponded(PlayerFormRespondedEvent event) {
         FormResponse data = event.getResponse();
         int ID = event.getFormID();
